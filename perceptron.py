@@ -19,7 +19,6 @@ class Perceptron(object):
         
         for i in range(self.n_iter):
             self.activations = self._forward(X)
-            # print self.activations
             self.weights -= self.eta * np.dot(np.transpose(X), self.activations - y)
 
     def predict(self, X):
